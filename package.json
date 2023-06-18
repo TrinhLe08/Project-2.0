@@ -1,7 +1,7 @@
 {
   "name": "my-disney-app",
   "version": "0.1.0",
-  "homepage": "https://TrinhLe08.github.io/Project2.0/",
+  "homepage": "https://TrinhLe08.github.io/Project-2.0/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
