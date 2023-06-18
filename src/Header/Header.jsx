@@ -126,7 +126,7 @@ export default function Header(){
             </div>
 
             <div className="menu">  
-                <p className="home"  id='menu' onClick = {ClickHome}> <a href="/Project2.0" className='a'>Home</a> </p>
+                <p className="home"  id='menu' onClick = {ClickHome}> <a href="/Project-2.0" className='a'>Home</a> </p>
                 <p className="sections" id='menu' onClick = {ClickSections}>Sections</p>
                 <p className="pages" id='menu' onClick = {ClickPages}>Example Pages</p>
                 <p className="demo"  id='menu' onClick = {ClickDemo}>Demo GitHub</p>

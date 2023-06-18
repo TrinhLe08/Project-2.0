@@ -15,7 +15,7 @@ function App() {
            <BrowserRouter>
                    <div className="App">
                        <Switch>
-                              <Route exact path="/Project2.0" component={Main} /> 
+                              <Route exact path="/Project-2.0" component={Main} /> 
                               <Route exact path="/*" component={NotFoud} /> 
                               {/* <Route exact path="*" render={() => <Redirect to="/NotFoud" />} /> */}
                         </Switch>  

@@ -296,7 +296,7 @@ function ThemeContext({children}) {
             link: 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemos.creative-tim.com%2Fnow-ui-kit-pro-react&t=Now%20UI%20Kit%20Pro%20React%20by%20Creative%20Tim',
             icon : FaFacebookSquare
         }, {
-            link : 'https://github.com/TrinhLe08/Project-2.0.git',
+            link : 'https://github.com/TrinhLe08/Project2.0.git',
             icon :FaGithubSquare
         }
     ]
