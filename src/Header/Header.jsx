@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import { useState, useEffect, useRef } from 'react'
 import $ from 'jquery';
 
 import { ThemeContext, VipContext } from '../Context/ThemeContext';
 import { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
+
+import LogoVip from '../Logo/LogoVip.png'
 
 
 export default function Header(){
@@ -36,6 +38,8 @@ export default function Header(){
                       );
         
                 },ScrollTop1)
+
+               
     
                 return
             }
@@ -130,8 +134,10 @@ export default function Header(){
     }
     
     const ClickSub = () => {
-        setSub(!sub);
-        
+        if (window.innerWidth < 700) {
+            setSub(!sub);
+            return
+        }
     }
 
     const Header =  useRef(null)
@@ -150,12 +156,21 @@ export default function Header(){
           });
     },[])
 
+  
+
+
 
    
     return (
         <div className="header" style = { sub ? {marginTop : '0px'}: {marginTop : '-475px'} }>
             <div className='Topic' >
             <a href="/Project-2.0" className='a'>NOW UI KIT Pro</a>
+            </div>
+            <div className="logo">
+            <a href="/Project-2.0" className='a'>
+                <img src= {LogoVip} alt="" className="logo" />
+
+            </a>
             </div>
 
             <div className="menu">  
@@ -165,7 +180,7 @@ export default function Header(){
                 <p className="demo"  id='menu' onClick = {ClickDemo}>Demo GitHub</p>
                 <p className="icon"  id='menu' onClick = {ClickIcon}>Custom Icons</p>
                 <p className="buy"  id='menu' onClick = {ClickBuy}>Buy Now</p>
-                <p className="sub"  id='submenu' onClick = {ClickSub} >⥡</p>
+                <p className="sub"  id='submenu' onClick = {ClickSub} >{ sub ? '⥠' : '⥡'}</p>
             </div>
         
         </div>

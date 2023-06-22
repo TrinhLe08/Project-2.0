@@ -20,6 +20,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #000033;
 }
+.header .logo {
+  margin-top: 10px;
+  margin-left: -48px;
+  width: 40px;
+}
 .header .a:hover {
   color: #4c8de8;
 }
@@ -996,6 +1001,9 @@
     display: grid;
     justify-content: center;
     transition: all 0.4s ease-in-out;
+  }
+  #root .App .header .logo {
+    margin-left: 33%;
   }
   #root .App .header .Topic {
     height: 30px;

@@ -25,7 +25,6 @@ function App() {
     <ThemeContext>
            <BrowserRouter>  
                    <div className="App">
-                    {/* <Header></Header> */}
                        <Switch>
                                <Route exact path="/Project-2.0" component={Main} /> 
                                <Route exact path="/AboutUs" component={AboutUs} />
