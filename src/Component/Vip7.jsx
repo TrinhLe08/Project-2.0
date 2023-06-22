@@ -6,7 +6,7 @@ import Ecommerce from '../RoutingComponent/Ecommerce';
 import LandingPage from '../RoutingComponent/LandingPage';
 import PricingPage from '../RoutingComponent/PricingPage';
 import ProductPage from '../RoutingComponent/ProductPage';
-import ProductPage2 from '../RoutingComponent/ProductPage2';
+import LoginPage from '../RoutingComponent/LoginPage';
 import ProfilePage from '../RoutingComponent/ProfilePage';
 import SignupPage from '../RoutingComponent/SignupPage';
 
@@ -21,8 +21,6 @@ export default function Vip7(){
     const Vip = useContext(VipContext)
 
     return(
-
-    <BrowserRouter>
        
         <div className="Vip7">
             <div className="div">
@@ -42,27 +40,13 @@ export default function Vip7(){
         
                {
                    Vip.Vip7.map((img,index) => (
-                       <Img2 index = {index} ImgV = {img} na/>
+                       <Img2 index = {index} ImgV = {img} key = { index }/>
                    ))
                }
                
          </div>
-
-         <Switch>
-          <Route exact path="/AboutUs" component={AboutUs} />
-          <Route path="/PricingPage" component={PricingPage} />
-          <Route path="/LandingPage" component={LandingPage} />
-          <Route path="/ProductPage" component={ProductPage} />
-          <Route path="/Ecommerce" component={Ecommerce} />
-          <Route path="/ProductPage2" component={ProductPage2} />
-          <Route path="/SignupPage" component={SignupPage} />
-          <Route path="/ProfilePage" component={ProfilePage} />
-          <Route path="/ContactUs" component={ContactUs} />
-         </Switch>
-
-       
         </div>
-  </BrowserRouter> 
+
       
     )
 }

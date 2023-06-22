@@ -18,7 +18,7 @@ export default function Vip10(){
           <div className="divBoss">
             {
               Vip.Vip10.map(div => (
-                 <Div1 Div = {div} />
+                 <Div1 Div = {div}  key = { div }/>
               ))
             }
           </div>

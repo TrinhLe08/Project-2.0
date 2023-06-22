@@ -5,6 +5,57 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
 }
+.header {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding-bottom: 20px;
+  color: white;
+}
+.header .Topic {
+  margin-top: 30px;
+  margin-right: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000033;
+}
+.header .a:hover {
+  color: #4c8de8;
+}
+.header .menu {
+  margin-right: 170px;
+  margin-top: 20px;
+  display: flex;
+  column-gap: 30px;
+}
+.header .menu a {
+  text-decoration: none;
+}
+.header .menu .buy {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+.header .menu .sub {
+  display: none;
+  height: 10px;
+}
+.header .menu #menu {
+  width: 150px;
+  font-size: 20px;
+  border: none;
+  font-weight: 100;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.header .menu #menu:hover {
+  background-color: rgba(212, 230, 245, 0.3);
+}
 .App {
   position: relative;
   height: auto;
@@ -51,62 +102,17 @@
   top: 50%;
   z-index: 9;
 }
+.Scroll {
+  background-color: white;
+  color: black;
+}
 .Main {
   width: 100%;
-}
-.Main .Scroll {
-  background-color: white;
-  color: black;
-}
-.Main .header {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  width: 1496px;
-  z-index: 99;
-  padding-bottom: 20px;
-  color: white;
-}
-.Main .header .menu {
-  margin-right: 200px;
-  margin-top: 20px;
-  display: flex;
-  column-gap: 30px;
-}
-.Main .header .menu .home {
-  color: white;
-}
-.Main .header .menu a {
-  text-decoration: none;
-}
-.Main .header .menu .buy {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-}
-.Main .header .menu .sub {
-  display: none;
-  height: 50px;
-  padding-top: 20px;
-}
-.Main .header .menu #menu {
-  width: 150px;
-  font-size: 20px;
-  border: none;
-  font-weight: 100;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.Main .header .menu #menu:hover {
-  background-color: rgba(212, 230, 245, 0.3);
+  overflow: hidden;
 }
 .Main .Vip1 {
   background-image: url('https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/nuk-pro-back-sky.00c25602.jpg');
-  width: 1476px;
+  width: 100%;
   height: 724px;
 }
 .Main .Vip1 .h1 {
@@ -136,7 +142,7 @@
 .Main .Vip1 .img {
   position: absolute;
   top: 100px;
-  width: 1476px;
+  width: 100%;
   height: 724px;
   overflow: hidden;
   z-index: 2;
@@ -154,7 +160,7 @@
   margin-top: 100px;
   position: relative;
   background-color: #000033;
-  width: 1476px;
+  width: 100%;
   height: 1124px;
   display: grid;
   color: white;
@@ -268,7 +274,7 @@
   animation: slide3 3s ease-in-out infinite alternate;
 }
 .Main .Vip3 .div2 .img3 {
-  width: 320px;
+  width: 80%;
   top: 30%;
   right: -5%;
   animation: slide1 4s ease-in-out infinite alternate;
@@ -374,6 +380,7 @@
   z-index: 3;
 }
 .Main .Vip5 {
+  width: 100%;
   height: 1000px;
   margin-top: -200px;
   display: flex;
@@ -550,7 +557,7 @@
 }
 .Main .Vip8 {
   display: flex;
-  width: 1476px;
+  width: 100%;
   height: 800px;
   overflow: hidden;
 }
@@ -704,7 +711,7 @@
 }
 .Main .Vip10 {
   background-image: url('https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/bg51.2438d881.jpg');
-  width: 1476px;
+  width: 100%;
   height: 700px;
   overflow: hidden;
   display: flex;
@@ -752,7 +759,7 @@
   background-color: #130b0b;
   color: white;
   text-align: center ;
-  width: 1476px;
+  width: 100%;
   height: 800px;
   padding-top: 100px;
   position: relative;
@@ -960,48 +967,64 @@
 .Back:hover {
   background-color: rgba(206, 198, 198, 0.5);
 }
-@media only screen and (max-width: 400px) {
+#routingComponent {
+  width: 100%;
+  overflow: hidden;
+}
+#routingComponent #img1 {
+  width: 100%;
+}
+#routingComponent .Signup,
+#routingComponent .Login {
+  height: 740px;
+}
+.LandingPage .img2 {
+  margin-left: 1.5px;
+  margin-top: -2px;
+}
+@media only screen and (max-width: 600px) {
   #root {
-    width: 400px;
+    width: 100% ;
     overflow: hidden ;
   }
-  #root .App .Main .header {
-    width: 400px;
-    text-align: center;
+  #root .App .header {
+    width: 100%;
     margin-top: -10px;
     background-color: white;
-    margin-top: -350px;
+    margin-top: -390px;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
   }
-  #root .App .Main .header div {
-    display: none;
+  #root .App .header .Topic {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #000033;
+    margin-top: 40px;
   }
-  #root .App .Main .header .menu {
-    width: 400px;
+  #root .App .header .menu {
+    width: 100%;
     text-align: center;
     display: grid;
     z-index: 6;
     margin-right: 5px;
   }
-  #root .App .Main .header .menu #menu {
-    width: 400px;
+  #root .App .header .menu #menu {
+    width: 100%;
     text-align: center;
     color: black;
   }
-  #root .App .Main .header {
-    margin-top: -350px;
-    transition: all 0.2s ease-in-out;
-  }
-  #root .App .Main .header .menu .sub {
-    display: block;
+  #root .App .header .menu .sub {
+    margin-bottom: -60px;
+    height: 50px;
     color: black;
-    padding-top: 40px;
-  }
-  #root .App .Main .header .menu .home {
-    height: 90px;
-    padding-top: 40px;
+    display: block;
   }
   #root .App .Main .Vip1 {
-    width: 700px;
+    width: 100%;
   }
   #root .App .Main .Vip1 .h1 {
     margin-top: 130px;
@@ -1016,24 +1039,24 @@
     z-index: 4;
   }
   #root .App .Main .Vip2 {
-    width: 400px;
+    width: 100%;
     text-align: center;
   }
   #root .App .Main .Vip2 .h2 {
-    width: 320px;
+    width: 80%;
     margin-left: 30px;
   }
   #root .App .Main .Vip2 .p1 {
-    width: 320px;
+    width: 80%;
     margin-left: 30px;
   }
   #root .App .Main .Vip2 .p2 {
-    width: 320px;
+    width: 80%;
     margin-left: 30px;
   }
   #root .App .Main .Vip2 .img {
     width: 450px;
-    margin-left: 180px;
+    margin-left: 35%;
   }
   #root .App .Main .Vip2 .img #img1 {
     width: 150px;
@@ -1045,7 +1068,7 @@
     height: 700px;
   }
   #root .App .Main .Vip3 .div1 {
-    width: 320px;
+    width: 80%;
     margin-left: 80px;
   }
   #root .App .Main .Vip3 .div2 {
@@ -1056,13 +1079,13 @@
     display: grid ;
   }
   #root .App .Main .Vip4 .div {
-    width: 320px;
+    width: 80%;
     margin-left: 20px;
   }
   #root .App .Main .Vip4 .img {
-    width: 320px;
+    width: 80%;
     margin-top: -100px;
-    margin-left: -85px;
+    margin-left: -17%;
     transform: scale(0.5);
     z-index: 4;
   }
@@ -1070,7 +1093,7 @@
     display: grid;
   }
   #root .App .Main .Vip5 .div {
-    width: 320px;
+    width: 80%;
     margin-left: 30px;
     margin-bottom: 50px;
   }
@@ -1090,7 +1113,7 @@
     align-items: center;
   }
   #root .App .Main .Vip6 .div {
-    width: 320px;
+    width: 80%;
     margin-left: 30px;
     margin-top: -100px;
   }
@@ -1104,9 +1127,10 @@
   #root .App .Main .Vip7 {
     height: auto;
     max-height: 8200px;
+    width: 100%;
   }
   #root .App .Main .Vip7 .div {
-    width: 320px;
+    width: 30%;
     height: 300px;
     margin-top: 50px;
     margin-left: 30px;
@@ -1115,7 +1139,7 @@
     display: grid;
     height: 5000px;
     grid-template-columns: repeat(1, 1fr);
-    margin-left: -350px;
+    margin-left: -34%;
     margin-top: -100px;
   }
   #root .App .Main .Vip7 .logPages .ImgV4 {
@@ -1133,18 +1157,18 @@
     display: none;
   }
   #root .App .Main .sub1 {
-    width: 400px;
-    margin-left: -350px;
+    width: 100%;
+    margin-left: -62%;
   }
   #root .App .Main .Vip8 {
     height: 1300px;
   }
   #root .App .Main .Vip8 .div1 {
-    width: 320px;
+    width: 80%;
     margin-left: 60px;
   }
   #root .App .Main .Vip8 .div1 .div {
-    width: 320px;
+    width: 80%;
   }
   #root .App .Main .Vip8 .div1 .img {
     display: grid;
@@ -1158,7 +1182,7 @@
     display: grid;
   }
   #root .App .Main .Vip10 .divBoss {
-    width: 320px;
+    width: 80%;
     margin-left: 10px;
   }
   #root .App .Main .Vip10 .divBoss .div .subDiv .p {
@@ -1168,19 +1192,19 @@
     display: none;
   }
   #root .App .Main .Vip11 {
-    width: 400px;
+    width: 100%;
     height: 2000px;
   }
   #root .App .Main .Vip11 .div {
-    width: 320px;
+    width: 80%;
     margin-left: 10px;
   }
   #root .App .Main .Vip11 .div .h1 {
-    width: 320px;
+    width: 100%;
     margin-left: 20px;
   }
   #root .App .Main .Vip11 .div .p {
-    width: 320px;
+    width: 100%;
     margin-left: 10px;
   }
   #root .App .Main .Vip11 .slideBigBoss {
@@ -1192,7 +1216,7 @@
     display: grid;
   }
   #root .App .Main .Vip11 .slideBigBoss .slideBoss .slide {
-    width: 320px;
+    width: 17%;
   }
   #root .App .Main .Vip11 .arrow {
     display: none;
@@ -1205,14 +1229,14 @@
     display: none;
   }
   #root .App .Main .Vip12 .div1 {
-    width: 300px;
+    width: 65%;
     margin-left: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   #root .App .Main .Vip12 .div2 .h1 {
-    width: 330px;
+    width: 100%;
     font-size: 25px;
-    margin-left: 4  0px;
+    margin-left: 0px;
   }
 }

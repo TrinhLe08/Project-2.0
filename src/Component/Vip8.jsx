@@ -32,7 +32,7 @@ export default function Vip8(){
                 {
                     Vip.Vip8.map(demo => (
                           <div className="img">
-                             <Demo Demo = {demo} />
+                             <Demo Demo = {demo} key = {demo}/>
                           </div>
 
                     ))

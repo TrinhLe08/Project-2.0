@@ -1,8 +1,6 @@
+import { useState, useEffect, useRef } from 'react'
 
 import { FaStar } from 'react-icons/fa';
-import { AiOutlineDoubleLeft } from 'react-icons/ai';
-import { AiOutlineDoubleRight } from 'react-icons/ai';
-import { useState, useEffect, useRef } from 'react'
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
@@ -10,12 +8,60 @@ import { AiOutlineEuroCircle } from 'react-icons/ai';
 import { DiBootstrap } from 'react-icons/di';
 import { AiFillFileExcel } from 'react-icons/ai';
 
+import ImgAbout1 from '../RoutingComponent/imagesAbout/img1About.png'
+import ImgAbout2 from '../RoutingComponent/imagesAbout/img2About.png'
+import ImgAbout3 from '../RoutingComponent/imagesAbout/img3About.png'
+import ImgAbout4 from '../RoutingComponent/imagesAbout/img4About.png'
+import ImgAbout5 from '../RoutingComponent/imagesAbout/img5About.png'
+import ImgAbout6 from '../RoutingComponent/imagesAbout/img6About.png'
+import ImgAbout7 from '../RoutingComponent/imagesAbout/img7About.png'
+import ImgAbout8 from '../RoutingComponent/imagesAbout/img8About.png'
+
+import ImgContact1 from '../RoutingComponent/imagesContactUs/img1Contact.png'
+import ImgContact2 from '../RoutingComponent/imagesContactUs/img2Contact.png'
+import ImgContact3 from '../RoutingComponent/imagesContactUs/img3Contact.png'
+
+
+import ImgEcommerce1 from '../RoutingComponent/imagesEcommerce/img1Ecommerce.png'
+import ImgEcommerce2 from '../RoutingComponent/imagesEcommerce/img2Ecommerce.png'
+import ImgEcommerce3 from '../RoutingComponent/imagesEcommerce/img3Ecommerce.png'
+import ImgEcommerce4 from '../RoutingComponent/imagesEcommerce/img4Ecommerce.png'
+import ImgEcommerce5 from '../RoutingComponent/imagesEcommerce/img5Ecommerce.png'
+import ImgEcommerce6 from '../RoutingComponent/imagesEcommerce/img6Ecommerce.png'
+
+import ImgPricing1 from '../RoutingComponent/imagesPricingPage/img1Pricing.png'
+import ImgPricing2 from '../RoutingComponent/imagesPricingPage/img2Pricing.png'
+import ImgPricing3 from '../RoutingComponent/imagesPricingPage/img3Pricing.png'
+import ImgPricing4 from '../RoutingComponent/imagesPricingPage/img4Pricing.png'
+
+import ImgLanding1 from '../RoutingComponent/imagesLandingPage/img1Landing.png'
+import ImgLanding2 from '../RoutingComponent/imagesLandingPage/img2Landing.png'
+import ImgLanding3 from '../RoutingComponent/imagesLandingPage/img3Landing.png'
+import ImgLanding4 from '../RoutingComponent/imagesLandingPage/img4Landing.png'
+import ImgLanding5 from '../RoutingComponent/imagesLandingPage/img5Landing.png'
+import ImgLanding6 from '../RoutingComponent/imagesLandingPage/img6Landing.png'
+import ImgLanding7 from '../RoutingComponent/imagesLandingPage/img7Landing.png'
+
+import ImgProduct1 from '../RoutingComponent/imagesProductPage/img1Product.png'
+import ImgProduct2 from '../RoutingComponent/imagesProductPage/img2Product.png'
+import ImgProduct3 from '../RoutingComponent/imagesProductPage/img3Product.png'
+import ImgProduct4 from '../RoutingComponent/imagesProductPage/img4Product.png'
+import ImgProduct5 from '../RoutingComponent/imagesProductPage/img5Product.png'
+import ImgProduct6 from '../RoutingComponent/imagesProductPage/img6Product.png'
+import ImgProduct7 from '../RoutingComponent/imagesProductPage/img7Product.png'
+
+import ImgProfile1 from '../RoutingComponent/imagesProfilePage/img1Profile.png'
+import ImgProfile2 from '../RoutingComponent/imagesProfilePage/img2Profile.png'
+import ImgProfile3 from '../RoutingComponent/imagesProfilePage/img3Profile.png'
+
+
 
 import { useContext, createContext } from "react"
 
 const VipContext = createContext()
 
 function ThemeContext({children}) {
+
     const Vip2 = [
         {
             img : 'https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/basic_thumb.b6b142c0.jpg'
@@ -169,8 +215,8 @@ function ThemeContext({children}) {
             img: 'https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/ecommerce.41b02ef3.jpg',
             id: 4
         },   {
-            name: 'Product Page',
-            routing: 'ProductPage2',
+            name: 'Login Page',
+            routing: 'LoginPage',
             img: 'https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/login.f8b38322.jpg',
             id: 5
         },   {
@@ -300,6 +346,119 @@ function ThemeContext({children}) {
             icon :FaGithubSquare
         }
     ]
+
+
+    const subAbout = [
+        {
+            img: ImgAbout1
+        }, {
+            img : ImgAbout2
+        }, {
+            img : ImgAbout3
+        }, {
+            img : ImgAbout4
+        }, {
+            img : ImgAbout5
+        }, {
+            img : ImgAbout6
+        }, {
+            img : ImgAbout7
+        }, {
+            img : ImgAbout8
+        }
+        
+    ]
+
+    const subContact = [
+        {
+            img: ImgContact1
+        }, {
+            img : ImgContact2
+        }, {
+            img : ImgContact3
+        }
+    ]
+
+    const subEcommerce = [
+        {
+            img : ImgEcommerce1
+        }, {
+            img : ImgEcommerce2
+        }, {
+            img : ImgEcommerce3
+        }, {
+            img : ImgEcommerce4
+        }, {
+            img : ImgEcommerce5
+        }, {
+            img : ImgEcommerce6
+        }
+    ]
+
+    const subPricing = [
+        {
+            img : ImgPricing1
+        },     {
+            img : ImgPricing2
+        },     {
+            img : ImgPricing3
+        },     {
+            img : ImgPricing4
+        }
+    ]
+
+    const subLanding = [
+        {
+            img: ImgLanding1
+        }, {
+            img : ImgLanding2
+        }, {
+            img : ImgLanding3
+        }, {
+            img : ImgLanding4
+        }, {
+            img : ImgLanding5
+        }, {
+            img : ImgLanding6
+        }, {
+            img : ImgLanding7
+        }
+    ]
+
+    const subProduct = [
+        {
+            img: ImgProduct1
+        }, {
+            img : ImgProduct2
+        }, {
+            img : ImgProduct3
+        }, {
+            img : ImgProduct4
+        }, {
+            img : ImgProduct5
+        }, {
+            img : ImgProduct6
+        }, {
+            img : ImgProduct7
+        }
+    ]
+
+    const subProfile = [
+        {
+            img: ImgProfile1
+        }, {
+            img : ImgProfile2
+        }, {
+            img : ImgProfile3
+        }
+    ]
+
+
+    const Section = useRef(null)
+
+    // Section.current = 
+
+
   const Value = {
     Vip2,
     Vip3,
@@ -312,7 +471,15 @@ function ThemeContext({children}) {
     Vip11Slide,
     Vip11Sub,
     Vip12Img,
-    Vip12Icon
+    Vip12Icon,
+    subAbout,
+    subContact,
+    subEcommerce,
+    subPricing,
+    subLanding,
+    subProduct,
+    subProfile,
+    Section
   }
 
   return (

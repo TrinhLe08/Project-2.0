@@ -12,7 +12,7 @@ export default function Vip5(){
             <div className="img">
             {
                Vip.Vip5.map((img,index) => (
-                   <Img1 index = {index} Img = {img}/>
+                   <Img1 index = {index} Img = {img} key = {index}/>
                ))
             }
          </div>

@@ -6,6 +6,65 @@
     text-decoration: none;
 }
 
+.header{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding-bottom: 20px;
+    // transform : translateY(450px);
+    color: white;
+    .Topic{
+        margin-top: 30px;
+        margin-right: 100px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #000033;
+    }
+    .a:hover{
+        color:rgb(76, 141, 232)
+    }
+    .menu{
+        margin-right: 170px;
+        margin-top: 20px;
+        display: flex;
+        column-gap: 30px;
+        
+        a{
+           // color:white;
+            text-decoration: none;
+        }
+        // Scroll
+        
+        .buy{
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+        }
+        .sub{
+            display: none;
+            height: 10px;
+           
+        }
+      
+        #menu{
+            width: 150px;
+            font-size: 20px;
+             border: none;
+             font-weight: 100;
+             height: 50px;
+          //   color: white;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             transition: all 0.2s ease-in-out;
+             cursor: pointer;
+        }
+        #menu:hover{
+            background-color: rgba(212, 230, 245, 0.3);
+        }
+    }
+}
 .App{
     position: relative;
     height: auto;
@@ -49,74 +108,23 @@
    
 }
 
+.Scroll{
+ background-color: white;
+ color: black;
+}
 .Main{
    width: 100%;
-   .Scroll{
-    background-color: white;
-    color: black;
-   }
-
-    .header{
-        display: flex;
-        justify-content: flex-end;
-        position: fixed;
-        width: 1496px;
-        z-index: 99;
-        padding-bottom: 20px;
-        // transform : translateY(450px);
-        color: white;
-        .menu{
-            margin-right: 200px;
-            margin-top: 20px;
-            display: flex;
-            column-gap: 30px;
-             .home{
-                color: white;
-             }
-            a{
-               // color:white;
-                text-decoration: none;
-            }
-            // Scroll
-            
-            .buy{
-                background-color: white;
-                color: black;
-                border-radius: 5px;
-            }
-            .sub{
-                display: none;
-                height: 50px;
-                padding-top: 20px;
-            }
-          
-            #menu{
-                width: 150px;
-                font-size: 20px;
-                 border: none;
-                 font-weight: 100;
-                 height: 50px;
-              //   color: white;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-                 transition: all 0.2s ease-in-out;
-                 cursor: pointer;
-            }
-            #menu:hover{
-                background-color: rgba(212, 230, 245, 0.3);
-            }
-        }
-    }
+   overflow: hidden;
 
     .Vip1{
         background-image: url('https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/nuk-pro-back-sky.00c25602.jpg');
-        width: 1476px;
+        width: 100%;
         height: 724px;
         // position: absolute;
         // top: 0;
       
         .h1{
+          //  width: 100%;
             position: absolute;
             top: 160px;
             left:240px;
@@ -144,7 +152,7 @@
         .img{
             position: absolute;
             top: 100px;
-            width: 1476px;
+            width: 100%;
             height: 724px;
             overflow: hidden;
             z-index: 2;
@@ -167,7 +175,7 @@
         margin-top: 100px;
         position: relative;
         background-color: #000033;
-        width: 1476px;
+         width: 100%;
         height: 1124px;
         display: grid;
         color: white;
@@ -286,7 +294,7 @@
                 animation: slide3 3s ease-in-out infinite alternate;
             }
             .img3{
-                width: 320px;
+                 width: 80%;
                 top:30%;
                 right: -5%;
                 animation: slide1 4s ease-in-out infinite alternate;
@@ -395,6 +403,7 @@
 
 
     .Vip5{
+        width: 100%;
         height: 1000px;
         margin-top: -200px;
         display: flex;
@@ -580,7 +589,7 @@
 
     .Vip8{
         display: flex;
-        width: 1476px;
+         width: 100%;
         height: 800px;
         overflow: hidden;
         .div1{
@@ -742,7 +751,7 @@
 
     .Vip10{
         background-image: url('https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/bg51.2438d881.jpg');
-        width: 1476px;
+         width: 100%;
         height: 700px;
         overflow: hidden;
         display: flex;
@@ -794,7 +803,7 @@
         background-color: rgb(19, 11, 11);
         color : white;
         text-align:center ;
-        width: 1476px;
+         width: 100%;
         height: 800px;
         padding-top: 100px;
         position: relative;
@@ -1022,58 +1031,95 @@
 }
 
 
+#routingComponent{
+    width: 100%;
+    overflow: hidden;
+    #img1{
+        width: 100%;
+       
+    }
+    .Signup,.Login{
+        height: 740px;
+    }
+    
+
+}
+
+.LandingPage{
+    .img2{
+        margin-left: 1.5px;
+        margin-top: -2px;
+    }
+}
 
 
-@media only screen and (max-width: 400px) {
+
+
+@media only screen and (max-width: 600px) {
 
    #root{
-    width: 400px;
+    width: 100% ;
     overflow:hidden ;
     .App{
-
+        .header{
+            width: 100%;
+            
+            margin-top: -10px;
+            background-color: white;
+            margin-top: -390px; 
+            height: 500px;
+            display: grid;
+            justify-content: center;
+            transition: all 0.4s ease-in-out;
+            .Topic{
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                color: #000033;
+                margin-top: 40px;
+            }
+          .menu{
+           width: 100%;
+            text-align: center;
+            display: grid;
+            z-index: 6;
+            margin-right: 5px;
+            #menu{
+                width: 100%;
+                text-align: center;
+                color: black
+            }
+            .sub{
+                margin-bottom: -60px;
+                height: 50px;
+                color: black;
+                display: block;
+            }
+          }
+        }
         .Main{
-            .header{
-                width: 400px;
-                text-align: center;
-                margin-top: -10px;
-                background-color: white;
-                margin-top: -350px;
-                div{
-                    display: none;
-                }
-              .menu{
-                width: 400px;
-                text-align: center;
-                display: grid;
-                z-index: 6;
-                margin-right: 5px;
-               
-                #menu{
-                    width: 400px;
-                    text-align: center;
-                    color: black
-                }
-              }
-            }
-            .header{
-                margin-top: -350px;
-                transition: all 0.2s ease-in-out;
-                .menu{
-                    .sub{
-                        display: block;
-                        color: black;
-                        padding-top: 40px;
-                    }
+            // .header{
+            //     margin-top: -350px;
+            //     transition: all 0.2s ease-in-out;
+            //     height: 350px;
+            //     .menu{
+            //         .sub{
+            //             height: 40px;
+            //             display: block;
+            //             color: black;
+            //           padding-top: -50px;
+            //         }
                 
-                   .home{
-                    height: 90px;
-                    padding-top: 40px;
-                   }                   
-                }
+            //        .home{
+            //         height: 50px;
+            //         padding-bottom: 0px;
+            //        }                   
+            //     }
 
-            }
+            // }
             .Vip1{
-                width: 700px;
+                width: 100%;
                 .h1{
                     margin-top: 130px;
                     margin-left: -200px;
@@ -1089,23 +1135,23 @@
             }
 
             .Vip2{
-                width: 400px;
+                width: 100%;
                 text-align: center;
                 .h2{
-                    width: 320px;
+                    width: 80%;
                     margin-left: 30px;;
                 }
                 .p1{
-                    width: 320px;
+                    width: 80%;
                     margin-left: 30px;;
                 }
                 .p2{
-                    width: 320px;
+                    width: 80%;
                     margin-left: 30px;;
                 }
                 .img{
                     width: 450px;
-                    margin-left: 180px;;
+                    margin-left: 35%;
                     
                     #img1{
                         width: 150px;
@@ -1119,7 +1165,7 @@
                 margin-top: 250px;
                 height: 700px;
                 .div1{
-                    width: 320px;
+                    width: 80%;
                     margin-left: 80px;;
                 }
                 .div2{
@@ -1131,13 +1177,13 @@
             .Vip4{
                 display:grid ;
                 .div{
-                    width: 320px;
+                    width: 80%;
                     margin-left: 20px;;
                 }
                 .img{
-                    width: 320px;
+                     width: 80%;
                     margin-top: -100px;
-                    margin-left: -85px;;
+                    margin-left: -17%;;
                     transform: scale(0.5);
                     z-index: 4;
                 }
@@ -1147,7 +1193,7 @@
             .Vip5{
                 display: grid;
                 .div{
-                   width: 320px;
+                    width: 80%;
                    margin-left: 30px;
                   margin-bottom: 50px;
                 }
@@ -1170,7 +1216,7 @@
                 display: flex;
                 align-items: center;
                 .div{
-                    width: 320px;
+                    width: 80%;
                     margin-left: 30px;
                     margin-top: -100px;
                     .button{
@@ -1186,8 +1232,9 @@
             .Vip7{
                 height: auto;
                max-height: 8200px;
+               width: 100%;
                 .div{
-                    width: 320px;
+                    width: 30%;
                     height: 300px;
                     margin-top: 50px;
                     margin-left: 30px;
@@ -1196,7 +1243,7 @@
                    display: grid;
                    height: 5000px;
                    grid-template-columns: repeat(1,1fr);
-                    margin-left: -350px;
+                    margin-left: -34%;
                     margin-top: -100px;
                     
                     .ImgV4{
@@ -1215,18 +1262,18 @@
             }
 
             .sub1{
-                width: 400px;
-                margin-left: -350px;
+                width: 100%;
+                margin-left: -62%;
             }
 
 
             .Vip8{
                 height: 1300px;
                 .div1{
-                    width: 320px;
+                     width: 80%;
                     margin-left: 60px;
                     .div{
-                        width: 320px;
+                         width: 80%;
                     }
                     .img{
                         display: grid;
@@ -1247,7 +1294,7 @@
 
             .Vip10{
                 .divBoss{
-                    width: 320px;
+                     width: 80%;
                     margin-left: 10px;
                     .div{
                         .subDiv{
@@ -1264,17 +1311,17 @@
 
 
             .Vip11{
-                width: 400px;
+                width: 100%;
                 height: 2000px;
                 .div{
-                    width: 320px;
+                     width: 80%;
                     margin-left: 10px;
                     .h1{
-                        width: 320px;
+                         width: 100%;
                         margin-left: 20px;
                     }
                     .p{
-                        width: 320px;
+                         width: 100%;
                         margin-left: 10px;
                     }
                 }
@@ -1285,7 +1332,7 @@
                         row-gap: 40px;
                         display: grid;
                         .slide{
-                            width: 320px;
+                           width: 17%;
                         }
                     }
                 }
@@ -1303,7 +1350,7 @@
 
             .Vip12{
                 .div1{
-                    width: 300px;
+                    width: 65%;
                     margin-left: 50px;
                     display: grid;
                     grid-template-columns: repeat(2,1fr);
@@ -1311,9 +1358,9 @@
                 }
                 .div2{
                     .h1{
-                        width: 330px;
+                        width: 100%;
                         font-size: 25px;
-                        margin-left: 4  0px;
+                        margin-left: 0px;
                     }
                 }
             }

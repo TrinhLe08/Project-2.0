@@ -2,97 +2,131 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react'
 import $ from 'jquery';
 
+import { ThemeContext, VipContext } from '../Context/ThemeContext';
+import { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 export default function Header(){
 
-    const [sub, setSub] = useState(true)
- 
-    const ClickHome = () => {
-            if (window.innerWidth < 700) {
+    const Vip = useContext(VipContext)
 
-            setSub(!sub);
+    const [sub, setSub] = useState(true)
+
+    const Routing = useRef(null)
+
+    const location = useLocation();
+
+
+    const Click = (Width,Vip,ScrollTop1,ScrollBody,ScrollTop2,ScrollTop3,ScrollTop4) => {
+
+        
+        if (window.innerWidth < Width) {
+
+            if (location.pathname != '/Project-2.0') {
+                window.history.back();
+                setTimeout(() => {
+                    const scrollTask =  $(Vip).offset().top + (ScrollTop1)
+        
+                    $('html, body').animate(
+                        {
+                          scrollTop: scrollTask
+                        },
+                        ScrollBody
+                      );
+        
+                },ScrollTop1)
+    
+                return
+            }
+            
+            const scrollTask =  $(Vip).offset().top - ScrollTop2
+            
+            $('html, body').animate(
+                {
+                    scrollTop: scrollTask
+                },
+                ScrollTop3
+                );
+                
+                setSub(!sub);
+                return
+                
+            }
+
+
+            if (location.pathname != '/Project-2.0') {
+            window.history.back();
+            console.log(12);
+            setTimeout(() => {
+                const scrollTask =  $(Vip).offset().top + (ScrollTop1) 
+    
+                $('html, body').animate(
+                    {
+                      scrollTop: scrollTask
+                    },
+                    ScrollBody
+                  );
+    
+            },ScrollTop1)
+
+            
+          
+            
+            return
         }
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          });
+            const scrollTask =  $(Vip).offset().top + (ScrollTop4)
+          
+            $('html, body').animate(
+                {
+                  scrollTop: scrollTask
+                },
+                ScrollBody
+              );
+
+    }
+
+    const ClickHome = () => {
+
+          let Home = '.Vip1'
+
+          Click(700,Home,5,500,90,900,-20)
     }
 
     const ClickSections = () => {
-            if (window.innerWidth < 700) {
 
-            setSub(!sub);
-        }
+        let Section = '.Vip6'
 
-        const scrollTask =  $('.Vip6').offset().top + 100
-      
-        $('html, body').animate(
-            {
-              scrollTop: scrollTask
-            },
-            500 
-          );
+        Click(700,Section,100,500,-90,900,100)
+
     }
 
     const ClickPages = () => {
-        if (window.innerWidth < 700) {
-
-            setSub(!sub);
-        }
-        const scrollTask =  $('.Vip7').offset().top + 100
       
-        $('html, body').animate(
-            {
-              scrollTop: scrollTask
-            },
-            500 
-          );
+        let Pages = '.Vip7'
+
+          Click(700,Pages,100,500,90,900,100)
+
     }
 
     const ClickDemo = () => {
-        if (window.innerWidth < 700) {
+        let Demo = '.Vip8'
 
-            setSub(!sub);
-        }
-        const scrollTask =  $('.Vip8').offset().top - 90
-      
-        $('html, body').animate(
-            {
-              scrollTop: scrollTask
-            },
-            800 
-          );
+        Click(700,Demo,1,500,-90,900,-20)
     }
 
-    const ClickIcon = () => {
-        if (window.innerWidth < 700) {
 
-            setSub(!sub);
-        }
-        const scrollTask =  $('.Vip9').offset().top - 90
-      
-        $('html, body').animate(
-            {
-              scrollTop: scrollTask
-            },
-            700 
-          );
+    const ClickIcon = () => {
+        let Icon = '.Vip9'
+
+        Click(700,Icon,1,500,90,900,-50)
     }
 
     const ClickBuy = () => {
-        if (window.innerWidth < 700) {
+        let Buy = '.Vip12'
 
-            setSub(!sub);
-        }
-        const scrollTask =  $('.Vip12').offset().top - 90
-      
-        $('html, body').animate(
-            {
-              scrollTop: scrollTask
-            },
-            1200 
-          );
+        Click(700,Buy,10,500,90,900,10)
     }
     
     const ClickSub = () => {
@@ -110,7 +144,6 @@ export default function Header(){
            Menu.current = this.document.querySelectorAll('#menu')
            A.current = this.document.querySelector('.a')
            Header.current.classList.toggle('Scroll', window.scrollY > 300);
-           A.current.classList.toggle('Scroll', window.scrollY > 300);
            Menu.current.forEach((value,index) => {
                Menu.current[index].classList.toggle('Scroll', window.scrollY > 300);
            })
@@ -120,13 +153,13 @@ export default function Header(){
 
    
     return (
-        <div className="header" style = { sub ? {marginTop : '0px'}: {marginTop : '-350px'} }>
-            <div>
-                <img src="" alt="" />
+        <div className="header" style = { sub ? {marginTop : '0px'}: {marginTop : '-475px'} }>
+            <div className='Topic' >
+            <a href="/Project-2.0" className='a'>NOW UI KIT Pro</a>
             </div>
 
             <div className="menu">  
-                <p className="home"  id='menu' onClick = {ClickHome}> <a href="/Project-2.0" className='a'>Home</a> </p>
+                <p className="home"  id='menu' onClick = {ClickHome}> Home </p>
                 <p className="sections" id='menu' onClick = {ClickSections}>Sections</p>
                 <p className="pages" id='menu' onClick = {ClickPages}>Example Pages</p>
                 <p className="demo"  id='menu' onClick = {ClickDemo}>Demo GitHub</p>
@@ -134,7 +167,7 @@ export default function Header(){
                 <p className="buy"  id='menu' onClick = {ClickBuy}>Buy Now</p>
                 <p className="sub"  id='submenu' onClick = {ClickSub} >⥡</p>
             </div>
-            {/* <div></div> */}
+        
         </div>
     )
 }

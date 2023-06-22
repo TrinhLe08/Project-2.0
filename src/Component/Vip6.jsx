@@ -6,8 +6,9 @@ import Img1 from '../SubComponent/Img1'
 export default function Vip6(){
 
     const Vip = useContext(VipContext)
+
     return(
-        <div className="Vip6">
+        <div className="Vip6" ref = {Vip.Section}>
             <div className="div">
                 <h1 className="h1">Sections you will love</h1>
                 <p className="p">Build pages in no time using pre-made sections! From headers to footers,
@@ -19,7 +20,7 @@ export default function Vip6(){
             <div className="img">
         {
             Vip.Vip6.map((img,index) => (
-                <Img1 index = {index} Img = {img}/>
+                <Img1 index = {index} Img = {img} key = { index }/>
             ))
         }
         </div>

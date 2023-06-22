@@ -27,7 +27,7 @@ export default function Vip3(){
                 <img src="https://demos.creative-tim.com/now-ui-kit-pro-react/static/media/ipad.1a2b8af2.png" alt="" className="imgBoss" />
               {
                 Vip.Vip3.map((img,index) => (
-                    <Img1 index = {index} Img = {img}/>
+                    <Img1 index = {index} Img = {img} key = { index }/>
                 ))
               }
 

@@ -21,7 +21,7 @@ export default function Vip4(){
               <div className="img">
                 {
                      Vip.Vip4.map((img,index) => (
-                         <Img1 index = {index} Img = {img}/>
+                         <Img1 index = {index} Img = {img} key = { index }/>
                      ))
                 }
              </div>

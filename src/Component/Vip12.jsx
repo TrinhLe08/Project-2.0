@@ -37,7 +37,7 @@ export default function Vip12(){
              <div className="icon">
                  {
                     Vip.Vip12Icon.map(icon => (
-                        <Img5 Icon = {icon} />
+                        <Img5 Icon = {icon} key = { icon }/>
                     ))
                  }
              </div>

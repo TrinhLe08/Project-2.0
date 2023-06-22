@@ -131,7 +131,7 @@ export default function Vip11() {
 
                     {
                         Vip.Vip11Slide.map(slide => (
-                            <Img3 Slide={slide} />
+                            <Img3 Slide={slide} key = { slide }/>
                         ))
                     }
 
@@ -153,7 +153,7 @@ export default function Vip11() {
             <div className="img">
                 {
                     Vip.Vip11Sub.map((subImg, index) => (
-                        <Img4 SubImg={subImg} index={index} />
+                        <Img4 SubImg={subImg} index={index} key = { index }/>
                     ))
                 }
             </div>
