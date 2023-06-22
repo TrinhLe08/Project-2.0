@@ -1043,15 +1043,15 @@
     text-align: center;
   }
   #root .App .Main .Vip2 .h2 {
-    width: 80%;
-    margin-left: 30px;
+    width: 79%;
+    margin-left: 10px;
   }
   #root .App .Main .Vip2 .p1 {
-    width: 80%;
+    width: 70%;
     margin-left: 30px;
   }
   #root .App .Main .Vip2 .p2 {
-    width: 80%;
+    width: 70%;
     margin-left: 30px;
   }
   #root .App .Main .Vip2 .img {
@@ -1087,16 +1087,16 @@
   }
   #root .App .Main .Vip4 .div .h1,
   #root .App .Main .Vip4 .div .p1 {
-    width: 80%;
+    width: 70%;
   }
   #root .App .Main .Vip4 .div .p2 {
-    width: 80%;
+    width: 70%;
   }
   #root .App .Main .Vip4 .img {
     width: 80%;
     margin-top: -100px;
-    margin-left: -17%;
-    transform: scale(0.5);
+    margin-left: -19%;
+    transform: scale(0.4);
     z-index: 4;
   }
   #root .App .Main .Vip5 {
@@ -1211,7 +1211,7 @@
   }
   #root .App .Main .Vip11 .div .h1 {
     width: 110%;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   #root .App .Main .Vip11 .div .p {
     width: 110%;
@@ -1226,7 +1226,9 @@
     display: grid;
   }
   #root .App .Main .Vip11 .slideBigBoss .slideBoss .slide {
+    transform: scale(0.8);
     width: 17%;
+    margin-left: -20px;
   }
   #root .App .Main .Vip11 .arrow {
     display: none;
