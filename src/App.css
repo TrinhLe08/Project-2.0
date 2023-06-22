@@ -1071,6 +1071,9 @@
     width: 80%;
     margin-left: 80px;
   }
+  #root .App .Main .Vip3 .div1 .p2 {
+    width: 80%;
+  }
   #root .App .Main .Vip3 .div2 {
     transform: scale(0.5);
     margin-left: -100px;
@@ -1079,8 +1082,15 @@
     display: grid ;
   }
   #root .App .Main .Vip4 .div {
-    width: 80%;
+    width: 60%;
     margin-left: 20px;
+  }
+  #root .App .Main .Vip4 .div .h1,
+  #root .App .Main .Vip4 .div .p1 {
+    width: 80%;
+  }
+  #root .App .Main .Vip4 .div .p2 {
+    width: 80%;
   }
   #root .App .Main .Vip4 .img {
     width: 80%;
@@ -1139,7 +1149,7 @@
     display: grid;
     height: 5000px;
     grid-template-columns: repeat(1, 1fr);
-    margin-left: -34%;
+    margin-left: -32%;
     margin-top: -100px;
   }
   #root .App .Main .Vip7 .logPages .ImgV4 {
@@ -1200,11 +1210,11 @@
     margin-left: 10px;
   }
   #root .App .Main .Vip11 .div .h1 {
-    width: 100%;
+    width: 110%;
     margin-left: 20px;
   }
   #root .App .Main .Vip11 .div .p {
-    width: 100%;
+    width: 110%;
     margin-left: 10px;
   }
   #root .App .Main .Vip11 .slideBigBoss {
@@ -1230,9 +1240,10 @@
   }
   #root .App .Main .Vip12 .div1 {
     width: 65%;
-    margin-left: 50px;
+    margin-left: 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
   }
   #root .App .Main .Vip12 .div2 .h1 {
     width: 100%;
