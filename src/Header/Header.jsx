@@ -25,7 +25,7 @@ export default function Header(){
         
         if (window.innerWidth < Width) {
 
-            if (location.pathname != '/Project-2.0/') {
+            if (location.pathname != 'https://trinhle08.github.io/Project-2.0/') {
                 window.history.back();
                 setTimeout(() => {
                     const scrollTask =  $(Vip).offset().top + (ScrollTop1)
@@ -59,7 +59,7 @@ export default function Header(){
             }
 
 
-            if (location.pathname != '/Project-2.0/') {
+            if (location.pathname != 'https://trinhle08.github.io/Project-2.0/') {
             window.history.back();
             console.log(12);
             setTimeout(() => {
