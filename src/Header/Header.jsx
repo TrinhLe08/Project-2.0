@@ -164,10 +164,10 @@ export default function Header(){
     return (
         <div className="header" style = { sub ? {marginTop : '0px'}: {marginTop : '-475px'} }>
             <div className='Topic' >
-            <a href="https://trinhle08.github.io/Project-2.0/" className='a'>NOW UI KIT Pro</a>
+            <a href="" className='a'>NOW UI KIT Pro</a>
             </div>
             <div className="logo">
-            <a href="https://trinhle08.github.io/Project-2.0/" className='a'>
+            <a href="" className='a'>
                 <img src= {LogoVip} alt="" className="logo" />
 
             </a>
