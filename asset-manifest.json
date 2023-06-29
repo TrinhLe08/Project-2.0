@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Project-2.0/static/css/main.b720e09c.css",
-    "main.js": "/Project-2.0/static/js/main.dd3e19b9.js",
+    "main.css": "/Project-2.0/static/css/main.5ab84350.css",
+    "main.js": "/Project-2.0/static/js/main.b6f0f8d8.js",
     "static/media/imgLogin.png": "/Project-2.0/static/media/imgLogin.ab54114fd6a754c81701.png",
     "static/media/img1Contact.png": "/Project-2.0/static/media/img1Contact.657573265f3141c03080.png",
     "static/media/img7About.png": "/Project-2.0/static/media/img7About.1cfd08bccd753b24535e.png",
@@ -42,13 +42,15 @@
     "static/media/img8About.png": "/Project-2.0/static/media/img8About.b0d9a3628705a9c4d329.png",
     "static/media/img2Product.png": "/Project-2.0/static/media/img2Product.93c874a504ed608af71a.png",
     "static/media/img7Landing.png": "/Project-2.0/static/media/img7Landing.65035c6d4fd4a2ec7007.png",
+    "static/media/sub.png": "/Project-2.0/static/media/sub.ff95fbd0761ca3f730a3.png",
+    "static/media/Bank.png": "/Project-2.0/static/media/Bank.0dabc940a1aa727c1cba.png",
     "static/media/logo.svg": "/Project-2.0/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Project-2.0/index.html",
-    "main.b720e09c.css.map": "/Project-2.0/static/css/main.b720e09c.css.map",
-    "main.dd3e19b9.js.map": "/Project-2.0/static/js/main.dd3e19b9.js.map"
+    "main.5ab84350.css.map": "/Project-2.0/static/css/main.5ab84350.css.map",
+    "main.b6f0f8d8.js.map": "/Project-2.0/static/js/main.b6f0f8d8.js.map"
   },
   "entrypoints": [
-    "static/css/main.b720e09c.css",
-    "static/js/main.dd3e19b9.js"
+    "static/css/main.5ab84350.css",
+    "static/js/main.b6f0f8d8.js"
   ]
 }
