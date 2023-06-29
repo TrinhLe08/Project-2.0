@@ -20,12 +20,29 @@ export default function Header(){
     const location = useLocation();
 
 
+    
+    const Header =  useRef(null)
+    const Menu =  useRef(null)
+    const A = useRef(null)
+    
+    useEffect(() => {
+        window.addEventListener('scroll', function() {
+            Header.current = this.document.querySelector('.header')
+            Menu.current = this.document.querySelectorAll('#menu')
+            A.current = this.document.querySelector('.a')
+            Header.current.classList.toggle('Scroll', window.scrollY > 300);
+            Menu.current.forEach((value,index) => {
+                Menu.current[index].classList.toggle('Scroll', window.scrollY > 300);
+            })
+        });
+    },[])
+
     const Click = (Width,Vip,ScrollTop1,ScrollBody,ScrollTop2,ScrollTop3,ScrollTop4) => {
 
         
         if (window.innerWidth < Width) {
 
-            if (location.pathname != 'https://trinhle08.github.io/Project-2.0/') {
+            if (location.pathname != '/Project-2.0') {
                 window.history.back();
                 setTimeout(() => {
                     const scrollTask =  $(Vip).offset().top + (ScrollTop1)
@@ -59,7 +76,7 @@ export default function Header(){
             }
 
 
-            if (location.pathname != 'https://trinhle08.github.io/Project-2.0/') {
+            if (location.pathname != '/Project-2.0') {
             window.history.back();
             console.log(12);
             setTimeout(() => {
@@ -140,21 +157,6 @@ export default function Header(){
         }
     }
 
-    const Header =  useRef(null)
-    const Menu =  useRef(null)
-    const A = useRef(null)
-
-    useEffect(() => {
-        window.addEventListener('scroll', function() {
-           Header.current = this.document.querySelector('.header')
-           Menu.current = this.document.querySelectorAll('#menu')
-           A.current = this.document.querySelector('.a')
-           Header.current.classList.toggle('Scroll', window.scrollY > 300);
-           Menu.current.forEach((value,index) => {
-               Menu.current[index].classList.toggle('Scroll', window.scrollY > 300);
-           })
-          });
-    },[])
 
   
 
@@ -162,7 +164,7 @@ export default function Header(){
 
    
     return (
-        <div className="header" style = { sub ? {marginTop : '0px'}: {marginTop : '-475px'} }>
+        <div className="header" style = { sub ? {marginTop : '0px'}: {marginTop : '-495px'} }>
             <div className='Topic' >
             <a href="#" className='a'>NOW UI KIT Pro</a>
             </div>
@@ -174,12 +176,16 @@ export default function Header(){
             </div>
 
             <div className="menu">  
-                <p className="home"  id='menu' onClick = {ClickHome}> Home </p>
-                <p className="sections" id='menu' onClick = {ClickSections}>Sections</p>
-                <p className="pages" id='menu' onClick = {ClickPages}>Example Pages</p>
-                <p className="demo"  id='menu' onClick = {ClickDemo}>Demo GitHub</p>
-                <p className="icon"  id='menu' onClick = {ClickIcon}>Custom Icons</p>
-                <p className="buy"  id='menu' onClick = {ClickBuy}>Buy Now</p>
+                <p className="home"  id='menu' onClick = {ClickHome}> {!Vip.vietSub ? 'Trang Chủ' : 'Home'}</p>
+                <p className="sections" id='menu' onClick = {ClickSections}>{!Vip.vietSub ? 'Thành Phần Chính' : 'Sections'}</p>
+                <p className="pages" id='menu' onClick = {ClickPages}>{!Vip.vietSub ? 'Trang Tham Khảo' : 'Example Pages'}</p>
+                <p className="demo"  id='menu' onClick = {ClickDemo}>{!Vip.vietSub ? 'Minh Họa GitHGub' : 'Demo GitHub'}</p>
+                <p className="icon"  id='menu' onClick = {ClickIcon}>{!Vip.vietSub ? 'Biểu Tượng Tùy Chỉnh' : 'Custom Icons'}</p>
+                <p className="buy"  id='menu' onClick = {ClickBuy}>{!Vip.vietSub ? 'Mua ' : 'Buy Now' }</p>
+                 <select className = 'Language' id="menu"  onChange = {Vip.Translate}>
+                    <option value="en" className='English' id='menu'>English</option>
+                    <option value="vi" className='VietNam' id='menu'>Việt Nam</option>
+                  </select>
                 <p className="sub"  id='submenu' onClick = {ClickSub} >{ sub ? '⥠' : '⥡'}</p>
             </div>
         

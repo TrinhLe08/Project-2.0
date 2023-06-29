@@ -8,6 +8,7 @@ export default function Button(){
 
     let Main = useRef(null)
 
+    let Scroll = window.innerHeight
     let Height = 900
     let X = window.pageYOffset
 
@@ -32,22 +33,32 @@ export default function Button(){
           };
       
 },[])
+
+const getPercentageHeight = (percentage) => {
+  const windowHeight = window.innerHeight;
+  return percentage / 100 * windowHeight;
+};
     
       const Toggle1 = () => {
-       Toggle(-1)
+        const distance = getPercentageHeight(100);
+        Toggle(-1, distance);
       }
 
       const Toggle2 = () => {
-        Toggle(1)
+        const distance = getPercentageHeight(100);
+        Toggle(1, distance);
       }
 
      
-      const Toggle = (number) => {
+      const Toggle = (number,distance) => {
+
+        const newScroll = scroll + number * distance;
+
         if(number == 1) {
        X = X + Height
 
         window.scrollTo({
-            top: scroll + Height,
+            top: newScroll,
             behavior: "smooth"
           });
 
@@ -56,7 +67,7 @@ export default function Button(){
             X = X - Height
          
                  window.scrollTo({
-                     top: scroll - Height,
+                     top: newScroll,
                      behavior: "smooth"
                    });
          
@@ -66,8 +77,8 @@ export default function Button(){
     
     return(
         <div className="Button">
-            <button className="Button1" onClick = {Toggle1}>⥜</button>
-            <button className="Button2" onClick = {Toggle2}>⥡</button>
+            <button className="Button1" onClick = {Toggle1}>↑</button>
+            <button className="Button2" onClick = {Toggle2}>↓</button>
         </div>
     )
 }

@@ -1,6 +1,8 @@
 import { ThemeContext, VipContext } from '../Context/ThemeContext';
 import { useContext } from 'react';
 
+import { Link } from 'react-router-dom'
+
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
@@ -9,9 +11,29 @@ import { FaGithubSquare } from "react-icons/fa";
 import Img4 from '../SubComponent/Img4'
 import Img5 from '../SubComponent/Img5'
 
+import $ from 'jquery';
+
 export default function Vip12(){
 
     const Vip = useContext(VipContext)
+
+    const ClickScroll = () => {
+    setTimeout(() =>  {
+        const scrollTask =  $('.buy').offset().top - 900
+            
+        $('html, body').animate(
+            {
+                scrollTop: scrollTask
+            },
+            1
+            );
+            return
+            
+    }
+    ,1
+    )
+}
+        
     
     
     return(
@@ -26,13 +48,18 @@ export default function Vip12(){
             </div>
 
             <div className="div2">
-             <h1 className="h1">Ready to grab Now UI Kit PRO?</h1>
+             <h1 className="h1"> {!Vip.vietSub ? 'Bạn đã sẵn sàng tải Now UI Kit PRO chưa?' : 'Ready to grab Now UI Kit PRO?'}</h1>
 
-             <button className="buttonBuy">
-                <a href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-scroll-transparent-navbar&_ga=2.192881322.1088411928.1686659004-1823786368.1685957193">Buy Now</a>
+             <button className="buttonBuy" onClick = {ClickScroll}>
+                <Link to="/Buy"> 
+                
+                {!Vip.vietSub ? 'Mua Ngay' : 'Buy Now'}
+                
+                </Link>
+
              </button>
 
-             <p className="p">Thank you for supporting us!</p>
+             <p className="p"> {!Vip.vietSub ? 'Cảm ơn bạn đã ủng hộ chúng tôi!' : 'Thank you for supporting us!'}</p>
 
              <div className="icon">
                  {

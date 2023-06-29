@@ -28,6 +28,9 @@
 .header .a:hover {
   color: #4c8de8;
 }
+.header .Language {
+  margin-right: -150px;
+}
 .header .menu {
   margin-right: 170px;
   margin-top: 20px;
@@ -987,6 +990,323 @@
   margin-left: 1.5px;
   margin-top: -2px;
 }
+.buy {
+  width: 100%;
+  height: 85.7ch;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+  background-color: #00CCFF;
+  position: relative;
+}
+.buy .img {
+  width: 550px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+.buy .buttonImg {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.buy .buttonImg .bu1,
+.buy .buttonImg .bu2 {
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+}
+.buy .buttonImg .bu1:hover,
+.buy .buttonImg .bu2:hover {
+  text-decoration: underline;
+}
+.buy .buttonImg .bu1 {
+  margin-right: 50px;
+  background-color: #00CCFF;
+  color: white;
+  border: 2px solid white;
+}
+.buy .buttonImg .bu2 {
+  background-color: white;
+  color: #8b7a7a;
+  border: none;
+}
+.buy .divBoss {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.buy .divBoss .div {
+  text-align: center;
+  width: 600px;
+  height: 300px;
+  color: white;
+  display: grid;
+  align-items: center;
+}
+.buy .divBoss .div .h1 {
+  font-size: 50px;
+  color: white;
+}
+.buy .divBoss .div .p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.buy .divBoss .div .button {
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 39%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: #673daa;
+  background-color: white;
+}
+.buy .divBoss .div .button:hover {
+  text-decoration: underline;
+}
+.Boss {
+  position: relative;
+}
+.Boss #overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.Boss .pop {
+  position: absolute;
+  top: 18%;
+  left: 35%;
+  z-index: 2;
+  background-color: #000033;
+  color: white;
+  width: 500px;
+  height: 400px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+.Boss .pop .button {
+  border: none;
+  background-color: #000033;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  width: 50px;
+  margin: 10px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+.Boss .pop .stick {
+  width: 500px;
+  font-size: 50px;
+  margin-top: 30px;
+}
+.Boss .pop .h1 {
+  width: 400px;
+  border-top: 1px solid white;
+  margin-left: 45px;
+}
+.Boss .pop .p {
+  font-size: 20px;
+  width: 350px;
+  margin-left: 69px;
+}
+.Boss .pop .p,
+.Boss .pop .p1 {
+  text-decoration: underline;
+}
+.Boss .back {
+  width: 70px;
+  height: 35px;
+  border: none;
+  border-radius: 7px;
+  margin-left: 110px;
+  transition: all 0.2s ease-in-out;
+}
+.Boss .back:hover {
+  text-decoration: underline;
+}
+.Pay {
+  height: 800px;
+  display: grid;
+  color: hsla(0, 2%, 25%, 0.3);
+}
+.Pay .windowBoss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Pay .windowBoss .h1 {
+  color: #000033;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.Pay .windowBoss .bank {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.Pay #input {
+  width: 500px;
+  height: 35px;
+  font-size: 15px;
+  padding-left: 10px;
+  border: 0.5px solid #939396;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.Pay .p {
+  color: red;
+  font-size: 12px;
+}
+.Pay #button {
+  width: 300px;
+  height: 35px;
+  background-color: #827125;
+  border: none;
+  color: white;
+  font-size: 22px;
+  border-radius: 3px;
+  margin-top: 30px;
+}
+.Pay .BigBoss {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.Pay .BigBoss .cart {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.Pay .BigBoss .cart .subPay {
+  display: flex;
+  column-gap: 20px;
+  width: 400px;
+  padding: 20px;
+  height: auto;
+}
+.Pay .BigBoss .cart .subPay .img {
+  width: 100px;
+}
+.Pay .BigBoss .cart .subPay .div .name {
+  color: black;
+}
+.Pay .BigBoss .cart .subPay .div .money {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  height: 30px;
+  color: black;
+  text-decoration: underline;
+}
+.Pay .BigBoss .cart .subPay .delete {
+  width: 50px;
+  height: 30px;
+  color: #535c62;
+  border: none;
+}
+.Pay .BigBoss .cart .total {
+  border-top: 1px solid black;
+  margin: 40px 30px 30px 30px;
+  color: #000033;
+  font-size: 20px;
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.Pay .BigBoss .cart .total .span {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.Pay .BigBoss .form {
+  height: 280px;
+  display: grid;
+}
+.Pay .BigBoss .form .select {
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  border-radius: 7px;
+  color: blue;
+}
+.Pay .BigBoss .advertise {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+.Pay .BigBoss .advertise .ImgSlide {
+  display: flex;
+}
+.Pay .BigBoss .advertise .ImgSlide #img1 {
+  width: 400px;
+  height: 300px;
+}
+.Pay .BigBuy {
+  display: grid;
+  margin-top: 20px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.Pay .BigBuy .h3 {
+  color: #000033;
+  transform: translateY(50px);
+  font-weight: 100;
+  margin-left: 30px;
+}
+.Pay .BigBuy .BuyMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  column-gap: 30px;
+}
+.Pay .BigBuy .BuyMore .subBay {
+  display: flex;
+}
+.Pay .BigBuy .BuyMore .subBay .img {
+  width: 100px;
+}
+.Pay .BigBuy .BuyMore .subBay .div {
+  text-align: center;
+}
+.Pay .BigBuy .BuyMore .subBay .div .name {
+  color: black;
+  width: 200px;
+}
+.Pay .BigBuy .BuyMore .subBay .div .money {
+  color: red;
+  text-decoration: underline;
+}
+.Pay .BigBuy .BuyMore .subBay .div .add {
+  width: 100px;
+  height: 25px;
+  margin-top: 15px;
+  background-color: white;
+  color: blue;
+  border: 2px solid  blue;
+  transition: all 0.2s ease-in-out;
+}
+.Pay .BigBuy .BuyMore .subBay .div .add:hover {
+  color: red;
+  border: 2px solid  red;
+}
+.Pay .subImg {
+  width: 100%;
+}
 @media only screen and (max-width: 600px) {
   #root {
     width: 100% ;
@@ -997,7 +1317,6 @@
     margin-top: -10px;
     background-color: white;
     margin-top: -390px;
-    height: 500px;
     display: grid;
     justify-content: center;
     transition: all 0.4s ease-in-out;
@@ -1259,5 +1578,61 @@
     width: 100%;
     font-size: 25px;
     margin-left: 0px;
+  }
+  #root .Boss .buy {
+    display: grid;
+  }
+  #root .Boss .buy div {
+    width: 100%;
+    text-align: center;
+  }
+  #root .Boss .buy div .img {
+    width: 60%;
+  }
+  #root .Boss .buy .divBoss .button {
+    width: 40%;
+    margin-left: 31%;
+  }
+  #root .Boss .Pay {
+    width: 100%;
+    display: grid;
+    height: auto;
+  }
+  #root .Boss .Pay .windowBoss {
+    display: grid;
+  }
+  #root .Boss .Pay .windowBoss .bank {
+    display: none;
+  }
+  #root .Boss .Pay .BigBoss {
+    width: 31%;
+    display: grid;
+    margin-left: 30%;
+  }
+  #root .Boss .Pay .BigBoss .cart {
+    width: 100%;
+    transform: scale(0.7);
+    margin-left: -10px;
+  }
+  #root .Boss .Pay .BigBoss .form {
+    width: 70%;
+    margin-left: 10%;
+  }
+  #root .Boss .Pay .BigBoss .form #input {
+    width: 101%;
+  }
+  #root .Boss .Pay .BigBuy .h3 {
+    width: 80%;
+  }
+  #root .Boss .Pay .BigBuy .BuyMore {
+    display: grid ;
+  }
+  #root #overlay {
+    width: 100%;
+    text-align: center;
+  }
+  #root #overlay .pop {
+    transform: scale(0.7);
+    margin-left: -50%;
   }
 }

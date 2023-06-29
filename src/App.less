@@ -13,7 +13,7 @@
     width: 100%;
     z-index: 99;
     padding-bottom: 20px;
-    // transform : translateY(450px);
+   
     color: white;
     .Topic{
         margin-top: 30px;
@@ -28,6 +28,9 @@
     }
     .a:hover{
         color:rgb(76, 141, 232)
+    }
+    .Language{
+        margin-right: -150px;
     }
     .menu{
         margin-right: 170px;
@@ -1057,6 +1060,349 @@
     }
 }
 
+.buy{
+    width: 100%;
+    height: 85.7ch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
+    background-color: #00CCFF;
+     position: relative;
+    .img{
+        width:  550px;
+        border-radius: 10px;
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+    .buttonImg{
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        .bu1,.bu2{
+            width: 130px;
+            height: 40px;
+            border-radius: 30px;
+        }
+        .bu1:hover,.bu2:hover{
+            text-decoration: underline;
+        }
+        .bu1{
+            margin-right: 50px;
+            background-color: #00CCFF;
+            color: white;
+            border: 2px solid white;
+        }
+        .bu2{
+            background-color: white;
+            color: rgb(139, 122, 122);
+            border: none;
+        }
+    }
+    .divBoss{
+        height: 500px;
+        display: flex;
+        align-items: center;
+        .div{
+            text-align: center;
+            width: 600px;
+            height: 300px;
+            color: white;
+            display: grid;
+            align-items: center;
+            .h1{
+                font-size: 50px;
+                color: white;
+            }
+            .p{
+                 font-size: 20px;
+                 font-weight: 500;
+            }
+            .button{
+                width: 140px;
+                height: 40px;
+                cursor: pointer;
+                margin-left: 39%;
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 30px;
+                color:rgb(103, 61, 170);
+                background-color: white;
+            }
+            .button:hover{
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+ 
+}
+
+.Boss{
+    position: relative;
+        #overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            
+            cursor: pointer;
+          }
+    .pop{
+        
+        position: absolute;
+        top:18%;
+        left: 35%;
+        z-index: 2;
+        background-color: #000033;
+        color: white;
+        width: 500px;
+        height: 400px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        .button{
+            border: none;
+            background-color: #000033;
+            color: white;
+           font-weight: 600;
+           font-size: 18px;
+           width: 50px;
+           margin: 10px;
+           position: absolute;
+           top: 1%;
+           right: 1%;
+
+        }
+       
+        .stick{
+            width: 500px;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+        .h1{
+            width: 400px;
+            border-top: 1px solid white;
+            margin-left: 45px;
+        }
+        .p{
+            font-size: 20px;
+            width: 350px;
+            margin-left: 69px;
+        }
+        .p,.p1{
+            text-decoration: underline;
+        }
+        
+       
+        }
+        .back{
+            width: 70px;
+            height: 35px;
+            border: none;
+            border-radius: 7px;
+            margin-left: 110px;
+            transition: all 0.2s ease-in-out;
+        }
+        .back:hover{
+            text-decoration: underline;
+        }
+
+    }
+
+
+.Pay{
+    height: 800px;
+    display: grid;
+    color: hsla(0, 2%, 25%, 0.3);
+    .windowBoss{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .h1{
+            color:#000033;
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+        .bank{
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+    }
+    #input{
+        width: 500px;
+        height: 35px;
+        font-size: 15px;
+        padding-left: 10px;
+        border: 0.5px solid rgb(147, 147, 150);
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    .p{
+        color: red;
+        font-size: 12px;
+    }
+    #button{
+        width: 300px;
+        height: 35px;
+        background-color: #827125;
+        border: none;
+        color: white;
+        font-size: 22px;
+        border-radius: 3px;
+        margin-top: 30px;
+    }
+    .BigBoss{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 50px;
+        .cart{
+            box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.2);
+            .subPay{
+                display: flex;
+                column-gap: 20px;
+                width: 400px;
+                padding: 20px;
+                height: auto;
+                .img{
+                    width: 100px;
+                }
+                .div{
+                    .name{
+                        color: black;
+                    }
+                    .money{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: end;
+                        height: 30px;
+                        color: black;
+                        text-decoration: underline;
+                    }
+
+                }
+                .delete{
+                    width: 50px;
+                    height: 30px;
+                    color: #535c62;
+                    border: none;
+                }
+            }
+            .total{
+                border-top: 1px solid black;
+                margin: 40px 30px 30px 30px;
+                color: #000033;
+                font-size: 20px;
+                display: flex;
+                width: 300px;
+                justify-content: space-between;
+                padding-top: 10px;
+                .span{
+                    font-size: 25px;
+                    font-weight: 600;
+                    text-decoration: underline;
+                }
+               }
+        }
+        .form{
+          height: 280px;
+          display: grid;
+          
+              .select{
+      
+                  width: 150px;
+                  height: 35px;
+                  text-align: center;
+                  border-radius: 7px;
+                  color: blue;
+      
+              }
+      
+        }
+        .advertise{
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            .ImgSlide{
+                display: flex;
+               
+                #img1{
+                 width: 400px;
+                 height: 300px;
+                }
+            }
+        }
+    }
+
+    .BigBuy{
+        display: grid;
+         margin-top: 20px;
+         box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.2);
+        .h3{
+            color: #000033;
+            transform : translateY(50px);
+            font-weight: 100;
+            margin-left: 30px
+        }
+
+        .BuyMore{
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            margin-bottom: 60px;
+            column-gap: 30px;
+            .subBay{
+                display: flex;
+               .img{
+                width: 100px;
+               }
+               .div{
+                text-align: center;
+                .name{
+                    color:black;
+                    width: 200px;
+                }
+                .money{
+                    color:red;
+                    text-decoration: underline;
+                }
+                .add{
+                    width: 100px;
+                    height: 25px;
+                    margin-top: 15px;
+                    background-color: white;
+                    color: blue;
+                    border: 2px solid  blue;
+                    transition: all 0.2s ease-in-out;
+    
+                }
+                .add:hover{
+                    color: red;
+                    border: 2px solid  red;
+                }
+               }
+             
+            }
+        }
+    }
+    .subImg{
+        width: 100%;
+       
+
+    }
+
+}
+
 
 
 
@@ -1072,7 +1418,7 @@
             margin-top: -10px;
             background-color: white;
             margin-top: -390px; 
-            height: 500px;
+           
             display: grid;
             justify-content: center;
             transition: all 0.4s ease-in-out;
@@ -1369,7 +1715,74 @@
         }
 
     }
+
+    .Boss{
+        .buy{
+            display: grid;
+            div{
+                width: 100%;
+                text-align: center;
+                .img{
+                    width: 60%;
+                    // margin-left: 10px;
+                }
+            }
+            .divBoss{
+                .button{
+                    width: 40%;
+                    margin-left: 31%;
+                }
+            }
+        }
+        .Pay{
+            width: 100%;
+            display: grid;
+            height: auto;
+            .windowBoss{
+                display: grid;
+                .bank{
+                   display: none;
+                }
+            }
+            .BigBoss{
+                width: 31%;
+                display: grid;
+                margin-left: 30%;
+                .cart{
+                    width: 100%;
+                    transform: scale(0.7);
+                    margin-left: -10px
+                }
+                .form{
+                    width: 70%;
+                    margin-left: 10%;
+                    #input{
+                        width: 101%;
+                    }
+                }
+            }
+            .BigBuy{
+                .h3{
+                    width: 80%;
+                }
+                .BuyMore{
+                    display:grid ;
+                }
+            }
+        }
+    }
+    #overlay{
+        width: 100%;
+        text-align: center;
+        .pop{
+            transform: scale(0.7);
+            margin-left: -50%;
+        }
+    }
    }
+
+
+
 
   
 }

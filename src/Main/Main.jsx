@@ -1,16 +1,18 @@
 import Button from '../Component/Button'
-import Vip1 from '../Component/Vip1'
-import Vip2 from '../Component/Vip2'
-import Vip3 from '../Component/Vip3'
-import Vip4 from '../Component/Vip4'
-import Vip5 from '../Component/Vip5'
-import Vip6 from '../Component/Vip6'
-import Vip7 from '../Component/Vip7'
-import Vip8 from '../Component/Vip8'
-import Vip9 from '../Component/Vip9'
-import Vip10 from '../Component/Vip10'
-import Vip11 from '../Component/Vip11'
-import Vip12 from '../Component/Vip12'
+import Vip1 from '../Component/Home'
+import Vip2 from '../Component/Impressive'
+import Vip3 from '../Component/BasicElements'
+import Vip4 from '../Component/BeautifulCards'
+import Vip5 from '../Component/ContentAreas'
+import Vip6 from '../Component/Sections'
+import Vip7 from '../Component/ExamplePages'
+import Vip8 from '../Component/FreeDemo'
+import Vip9 from '../Component/CustomIcons'
+import Vip10 from '../Component/User'
+import Vip11 from '../Component/Evaluate'
+import Vip12 from '../Component/BuyNow'
+
+import Pay from '../Buy/Pay'
 
 import Header from '../Header/Header'
 
@@ -21,7 +23,6 @@ export default function Main() {
 
         <div className="Main" >
             <Header></Header>
-
             <Button></Button>
             <Vip1></Vip1>
             <Vip2></Vip2>
@@ -35,6 +36,7 @@ export default function Main() {
             <Vip10></Vip10>
             <Vip11></Vip11>
             <Vip12></Vip12>
+           
 
         </div>
 

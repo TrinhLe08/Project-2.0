@@ -18,6 +18,8 @@ import Main from './Main/Main'
 import NotFoud from './404Notfoud/404';
 import { ThemeContext } from './Context/ThemeContext'
 
+import Buy from './Buy/Buy'
+
 
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
                                <Route path="/SignupPage" component={SignupPage} />
                                <Route path="/ProfilePage" component={ProfilePage} />
                                <Route path="/ContactUs" component={ContactUs} />
+                               <Route path="/Buy" component={Buy} />
                                <Route exact path="/*" component={NotFoud} /> 
                                <Route exact path="*" render={() => <Redirect to="/NotFoud" />} />
                         </Switch>  

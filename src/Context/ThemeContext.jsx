@@ -57,6 +57,8 @@ import ImgProfile3 from '../RoutingComponent/imagesProfilePage/img3Profile.png'
 
 
 import { useContext, createContext } from "react"
+        
+
 
 const VipContext = createContext()
 
@@ -453,10 +455,127 @@ function ThemeContext({children}) {
         }
     ]
 
+//-----------------------------------------    
+
 
     const Section = useRef(null)
 
-    // Section.current = 
+
+    const [vietSub,setVietSub] = useState(true)
+
+    const Translate = () => {
+        setVietSub(!vietSub)
+    }
+
+//-----------------------------------------
+
+    const [array,setArray] = useState( [
+        {
+            img :'https://secure.avangate.com/images/merchant/5d461a9f589b908d63d225c4859a0f1b/products/optnukp_react_thumbnail.jpg',
+            name : 'Now UI Kit PRO React',
+            sub: 'Selected options: (edit)',
+            free: 'Freelancer',
+            id: 0,
+            money: 79
+        }
+    ])
+
+//Push-->
+    function SETARRAY(value){
+        setArray([...array,value])
+    }
+
+    function DELETE(index, number) {
+        const newItems = [...index]; 
+        newItems.splice(number, 1); 
+        setArray(newItems); 
+    }
+
+//-----------------------------------------
+    function sum(numbers) {
+        let total = 0;
+        for (let number of numbers) {
+          total += number;
+        }
+        return total;
+      }
+    
+      let totalArray =[]
+    
+      array.map(arr => {
+            totalArray.push(arr.money)
+      })
+    
+      let Sum = sum(totalArray)
+    
+//-----------------------------------------
+
+      const [pop,setPop] = useState(false)
+
+      function  clickPop(){
+        setPop(!pop)                                                                                                                                    
+      }
+
+
+//----------------------------------------
+//--> Push Pop
+
+     const [pushPop,setPushPop] = useState({})
+
+//----------------------------------------
+
+const advertiseImg = [
+    {
+       img: 'https://genk.mediacdn.vn/2019/6/22/promotiondoublestorage-1561186618199280355933.jpg'
+    },   {
+        img: 'https://cdn.sforum.vn/sforum/wp-content/uploads/2020/08/OPPO-F17-1.jpg'
+     },   {
+        img: 'https://cdn.tgdd.vn/Files/2020/04/28/1252401/maxresdefault_800x450.jpg'
+     },   {
+        img: 'https://lenovosmartphone.vn/wp-content/uploads/2020/02/op1.jpg'
+     },   {
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeOmPwXAZRnTM4stOmbqLzoKzISGh1diMFubYDaGVXuIRp14tPIBAQWklHa0l4ixX_4Ek&usqp=CAU'
+     },   {
+        img: 'https://www.gizchina.com/wp-content/uploads/images/2020/09/OPPO-A93-launch-date.jpg'
+     },   {
+        img: 'https://cdn.tgdd.vn/Files/2021/03/09/1333890/lisa3_800x450.jpg'
+     },   {
+        img: 'https://cdn.24h.com.vn/upload/3-2020/images/2020-08-05/Lisa-BLACKPINK-chinh-thuc-tro-thanh-guong-mat-dai-dien-cho-san-pham-moi-cua-vivo-dien-thoai--1--1596619861-879-width660height439.jpg'
+     },   {
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyt036kc_Y4v26bBkEqnwSj64FWuAI6A-fXbcCuqyoaPlnq-OqIGZiOUhTbAvi2K5oe8&usqp=CAU'
+     },   {
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUgh-CYNaLILahlT8OsoXxRBbCISLpNmq_JaGEP33XaIgHjp1Slv8kLaTIOSS18qul0Iw&usqp=CAU'
+     },   {
+        img: 'https://www.xtmobile.vn/vnt_upload/news/02_2022/07/video-quang-cao-galaxy-s22-series-duoc-dang-tai-tai-my-truoc-them-ra-mat-xtmobile.jpg'
+     },   {
+        img: 'https://www.gizchina.com/wp-content/uploads/images/2020/09/OPPO-A93-launch-date.jpg'
+     },   {
+        img: 'https://cdn.sforum.vn/sforum/wp-content/uploads/2020/08/OPPO-F17-1.jpg'
+     },   {
+        img: 'https://lenovosmartphone.vn/wp-content/uploads/2020/02/op1.jpg'
+     }
+]
+
+
+const [img,setImg] = useState(0)
+
+
+useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImg(img => {
+        const newImg = img + 400;
+        return newImg >= advertiseImg.length * 400 ? 0 : newImg;
+      });
+    }, 5000);
+  
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+
+
+
 
 
   const Value = {
@@ -479,7 +598,19 @@ function ThemeContext({children}) {
     subLanding,
     subProduct,
     subProfile,
-    Section
+    Section,
+    vietSub,
+    Translate,
+    array,
+    SETARRAY,
+    DELETE,
+    Sum,
+    pop,
+    clickPop,
+    pushPop,
+    setPushPop,
+    advertiseImg,
+    img
   }
 
   return (

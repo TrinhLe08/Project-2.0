@@ -115,14 +115,16 @@ export default function Vip11() {
         <div className="Vip11">
             <div className="div">
                 <h1 className="h1">
-                    Trusted by 818,000+ People
+                {!Vip.vietSub ? 'Được Hơn 818.000 Người Tin Dùng' : 'Trusted by 818,000+ People'}
+                    
                 </h1>
                 <p className="p">
-                    The UI Kits, Templates and Dashboards that we've created are used by
-                    <span className="span"> 818,000+ web developers </span>
-                    in over
-                    <span className="span"> 1,476,616 Web Projects. </span>
-                    This is what some of them think:
+                {!Vip.vietSub ? 'Bộ giao diện người dùng, Mẫu và Trang tổng quan mà chúng tôi đã tạo được' : ' The UI Kits, Templates and Dashboards that we are created are used by'}
+                   
+                    <span className="span"> {!Vip.vietSub ? 'hơn 818.000 nhà phát triển web' : '818,000+ web developers'}  </span>
+                    {!Vip.vietSub ? 'sử dụng trong hơn' : 'in over'} 
+                    <span className="span">  {!Vip.vietSub ? '' : '1,476,616 Web Projects.'} </span>
+                    {!Vip.vietSub ? ' Đây là những gì một số người trong số họ nghĩ:' : 'This is what some of them think:'}
                 </p>
             </div>
 
