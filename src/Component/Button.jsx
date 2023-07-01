@@ -40,12 +40,12 @@ const getPercentageHeight = (percentage) => {
 };
     
       const Toggle1 = () => {
-        const distance = getPercentageHeight(100);
+        const distance = getPercentageHeight(50);
         Toggle(-1, distance);
       }
 
       const Toggle2 = () => {
-        const distance = getPercentageHeight(100);
+        const distance = getPercentageHeight(50);
         Toggle(1, distance);
       }
 
