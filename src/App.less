@@ -13,7 +13,7 @@
     width: 100%;
     z-index: 99;
     padding-bottom: 20px;
-   
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.2);
     color: white;
     .Topic{
         margin-top: 30px;
@@ -1199,6 +1199,9 @@
             width: 350px;
             margin-left: 69px;
         }
+        .p1{
+            padding: 21px;
+        }
         .p,.p1{
             text-decoration: underline;
         }
@@ -1260,12 +1263,24 @@
         font-size: 22px;
         border-radius: 3px;
         margin-top: 30px;
+        cursor: pointer;
     }
     .BigBoss{
         display: flex;
         width: 100%;
         justify-content: space-around;
         margin-top: 50px;
+        .vat {
+            border-top: 1px solid black;
+            .subVat{
+              width: 300px;
+                margin: 40px 30px 30px 30px;
+                color: #000033;
+                display: flex;
+                justify-content: space-between;
+               height: 1px;
+            }
+        }
         .cart{
             box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.2);
             .subPay{
@@ -1405,13 +1420,125 @@
 
 
 
+.POPUP{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .subPopUp{
+        background-image: url('https://ewebdesign.com/wp-content/uploads/2017/10/Giveaway-fixed-1.jpg');
+        width: 600px;
+        height: 300px;
+        text-align: center;
+        border-radius: 5px;
+        .h1,.h3{
+            color: #bfbeda;
+            span{
+                color: rgb(10, 5, 45);
+                text-decoration: underline;
+            }
+        }
+        form{
+           display: grid;
+           row-gap: 20px;
+           width: 400px;
+           margin-left: 17%;
+           margin-top: 7%;
+           #input{
+            background-color: #c1c6d0;
+            border: none;
+            height: 50px;
+            padding-left: 10px;
+            font-size: 17px;
+            border-radius: 40px;
+           }
+           .button{
+            background-color: #000033;
+            color: white;
+            border: none;
+            height: 50px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 20px;
+           }
+        }
+        .X{
+            width: 25pX;
+            height: 25px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            background-color: red;
+            margin-left: 90%;
+            margin-top: 1%;
+            cursor: pointer;
+        }
+    }
+}
+
+.alert{
+    background-color: #000033;
+    width: 400px;
+    height: 150px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    z-index: 999;
+    border-radius: 10px;
+    display: grid;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    .buttonAlert{
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(80, 80, 190);
+        color: white;
+        font-weight: 600;
+        margin-left: 35%;
+        cursor: pointer;
+    }
+}
+
+
+
 
 @media only screen and (max-width: 600px) {
-
+    
+    .alert{
+        width: 100%;
+        left: 0;
+    }
    #root{
     width: 100% ;
     overflow:hidden ;
     .App{
+        .POPUP{
+            .subPopUp{
+                width: 100%;
+                .h1,.h3,.form{
+                    width: 100%;
+                }
+                .form{
+                    margin-left: 0;
+                }
+            }
+        }
+       
         .header{
             width: 100%;
             

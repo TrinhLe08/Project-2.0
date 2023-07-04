@@ -9,8 +9,6 @@ import { useState, useEffect, useRef } from "react";
 export default function ImgSlide() {
   const Vip = useContext(VipContext);
 
-  console.log(Vip.img);
-
   return (
     <div
       className="ImgSlide"

@@ -588,7 +588,23 @@ function ThemeContext({ children }) {
   ];
 
   //-----------------------------------------
+  //--> POPUP MAIN
 
+  const [POP,setPOP] = useState(true)
+
+  function SETPOP(){
+    setPOP(false)
+  }
+
+  const [off,setOff] = useState(true)
+
+  function SETOFF(){
+    setOff(false)
+  }
+
+
+  //-----------------------------------------
+  //--> VietSub
   const Section = useRef(null);
 
   const [vietSub, setVietSub] = useState(true);
@@ -624,6 +640,7 @@ function ThemeContext({ children }) {
   }
 
   //-----------------------------------------
+   //--> Total Sum
   function sum(numbers) {
     let total = 0;
     for (let number of numbers) {
@@ -639,16 +656,18 @@ function ThemeContext({ children }) {
   });
 
   let Sum = sum(totalArray);
+  let Vat =  (Sum / 100)*5;
+  let OffSum = (Sum / 100)*3;
+  let TotalPriceOff = Sum + Vat - OffSum;
+  let TotalPrice = Sum + Vat;
 
-  //-----------------------------------------
+  //--> PopUp
 
   const [pop, setPop] = useState(false);
 
   function clickPop() {
     setPop(!pop);
   }
-
-  //----------------------------------------
   //--> Push Pop
 
   const [pushPop, setPushPop] = useState({});
@@ -738,12 +757,20 @@ function ThemeContext({ children }) {
     SETARRAY,
     DELETE,
     Sum,
+    Vat,
+    OffSum,
+    TotalPriceOff,
+    TotalPrice,
     pop,
     clickPop,
     pushPop,
     setPushPop,
     advertiseImg,
     img,
+    POP,
+    SETPOP, 
+    off,
+    SETOFF
   };
 
   return <VipContext.Provider value={Value}>{children}</VipContext.Provider>;

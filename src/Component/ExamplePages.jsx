@@ -1,15 +1,3 @@
-import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
-
-import AboutUs from "../RoutingComponent/AboutUs";
-import ContactUs from "../RoutingComponent/ContactUs";
-import Ecommerce from "../RoutingComponent/Ecommerce";
-import LandingPage from "../RoutingComponent/LandingPage";
-import PricingPage from "../RoutingComponent/PricingPage";
-import ProductPage from "../RoutingComponent/ProductPage";
-import LoginPage from "../RoutingComponent/LoginPage";
-import ProfilePage from "../RoutingComponent/ProfilePage";
-import SignupPage from "../RoutingComponent/SignupPage";
-
 import { ThemeContext, VipContext } from "../Context/ThemeContext";
 import { useContext } from "react";
 

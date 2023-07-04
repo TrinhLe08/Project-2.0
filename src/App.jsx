@@ -44,16 +44,4 @@ function App() {
 }
 
 export default App;
-{
-  /* <Route exact path="/Project-2.0" component={Main} />
-<Route exact path="/AboutUs" component={AboutUs} />
-<Route path="/PricingPage" component={PricingPage} />
-<Route path="/LandingPage" component={LandingPage} />
-<Route path="/ProductPage" component={ProductPage} />
-<Route path="/Ecommerce" component={Ecommerce} />
-<Route path="/LoginPage" component={LoginPage} />
-<Route path="/SignupPage" component={SignupPage} />
-<Route path="/ProfilePage" component={ProfilePage} />
-<Route path="/ContactUs" component={ContactUs} />
-<Route path="/Buy" component={Buy} /> */
-}
+

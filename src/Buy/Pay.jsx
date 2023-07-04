@@ -26,7 +26,7 @@ export default function Pay() {
       sub: "Selected options: (edit)",
       free: "Freelancer",
       delete: "Delete",
-      money: 24.5,
+      money: 25.5,
     },
     {
       img: "https://secure.avangate.com/images/merchant/5d461a9f589b908d63d225c4859a0f1b/products/opt_nudp_react_thumbnail.jpg",
@@ -66,7 +66,6 @@ export default function Pay() {
     }),
     onSubmit: (values) => {
       Vip.clickPop();
-
       Vip.setPushPop(values);
     },
   });
@@ -93,16 +92,45 @@ export default function Pay() {
             <SubPay Pay={arr} index={index} />
           ))}
 
+          <div className="vat">
+            <div className="subVat">
+              <p className="sub">
+                {!Vip.vietSub ? "Tổng Chưa Bao Gồm Thuế: " : "Subtotal:"}
+              </p>
+              <span className="spanToltal">{Vip.Sum}$</span>
+            </div>
+
+            <div className="subVat">
+              <p className="sub">
+                {!Vip.vietSub
+                  ? "Xác Nhận Gmail (-3%) :"
+                  : "Gmail Confirmation (-3%) :"}
+              </p>
+              <span className="spanToltal">
+                {Vip.off ? 0 : `${Vip.OffSum}`}$
+              </span>
+            </div>
+
+            <div className="subVat">
+              <p className="sub">
+                {!Vip.vietSub ? "Tổng THUẾ/VAT (5%) :" : "Total TAX/VAT (5%) :"}
+              </p>
+              <span className="spanToltal">{Vip.Vat}$</span>
+            </div>
+          </div>
+
           <div className="total">
             {" "}
-            {!Vip.vietSub ? "Tổng: " : "Total price:"}
-            <span className="span">{Vip.Sum}$</span>
+            {!Vip.vietSub ? "Tổng Đơn Hàng : " : "Total price:"}
+            <span className="span">
+              {Vip.off ? `${Vip.TotalPrice}` : `${Vip.TotalPriceOff}`}$
+            </span>
           </div>
         </div>
 
         <form className="form" onSubmit={formik.handleSubmit}>
           <label className="label" htmlFor="name">
-            Full Name :{" "}
+            {!Vip.vietSub ? "Họ Và Tên : " : " Full Name :"}{" "}
           </label>
           <input
             className="inputName"
@@ -134,7 +162,7 @@ export default function Pay() {
 
           <div>
             <label className="label" htmlFor="country">
-              Country:{" "}
+              {!Vip.vietSub ? "Quốc Gia : " : "Country:"}{" "}
             </label>
             <select
               className="select"

@@ -1,3 +1,6 @@
+import { ThemeContext, VipContext } from "../Context/ThemeContext";
+import { useContext } from "react";
+
 import Button from "../Component/Button";
 import Vip1 from "../Component/Home";
 import Vip2 from "../Component/Impressive";
@@ -11,12 +14,13 @@ import Vip9 from "../Component/CustomIcons";
 import Vip10 from "../Component/User";
 import Vip11 from "../Component/Evaluate";
 import Vip12 from "../Component/BuyNow";
-
-import Pay from "../Buy/Pay";
-
+import POPUP from '../POPUP/POPUP'
 import Header from "../Header/Header";
 
 export default function Main() {
+
+    const Vip = useContext(VipContext);
+    
   return (
     <div className="Main">
       <Header></Header>
@@ -33,6 +37,12 @@ export default function Main() {
       <Vip10></Vip10>
       <Vip11></Vip11>
       <Vip12></Vip12>
+      {
+        Vip.POP ? <POPUP></POPUP> : null
+      }
+
+      
+
     </div>
   );
 }

@@ -17,16 +17,16 @@ export default function Vip12() {
 
   const ClickScroll = () => {
     setTimeout(() => {
-      const scrollTask = $(".buy").offset().top - 900;
+      const scrollTask = $(".buy").offset().top - 1000;
 
       $("html, body").animate(
         {
           scrollTop: scrollTask,
         },
-        1
+        100
       );
       return;
-    }, 1);
+    }, 100);
   };
 
   return (
@@ -41,8 +41,8 @@ export default function Vip12() {
         <h1 className="h1">
           {" "}
           {!Vip.vietSub
-            ? "Bạn đã sẵn sàng tải Now UI Kit PRO chưa?"
-            : "Ready to grab Now UI Kit PRO?"}
+            ? "Bạn đã sẵn sàng tải Now UI Kit PRO chưa ?"
+            : "Ready to grab Now UI Kit PRO ?"}
         </h1>
 
         <button className="buttonBuy" onClick={ClickScroll}>
