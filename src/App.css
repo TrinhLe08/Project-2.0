@@ -1416,6 +1416,112 @@
   margin-left: 35%;
   cursor: pointer;
 }
+@media only screen and (max-width: 1100px) {
+  #root {
+    width: 100% ;
+    overflow: hidden ;
+  }
+  #root .header {
+    width: 100%;
+  }
+  #root .header .menu {
+    width: 100%;
+  }
+  #root .header .menu #menu {
+    width: 100px;
+  }
+  #root .Vip1 .h1 {
+    font-size: 120px;
+    left: 10%;
+  }
+  #root .Vip1 .p1 {
+    left: 30%;
+  }
+  #root .Vip2 {
+    width: 100%;
+  }
+  #root .Vip2 .h2 {
+    margin-left: 170px;
+  }
+  #root .Vip2 .p1 {
+    margin-left: 200px;
+  }
+  #root .Vip2 .p2 {
+    margin-left: 240px;
+  }
+  #root .Vip2 .img {
+    margin-left: 320px;
+  }
+  #root .Vip4 .div {
+    margin-left: 200px;
+  }
+  #root .Vip4 .img {
+    margin-left: 130px;
+  }
+  #root .Vip5 {
+    display: none;
+  }
+  #root .Vip6 {
+    height: 4000px;
+  }
+  #root .Vip6 .div {
+    margin-left: 200px;
+  }
+  #root .Vip6 .img {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #root .Vip7 .div {
+    margin-left: 200px;
+  }
+  #root .Vip7 .logPages {
+    width: 100%;
+    margin-left: 0;
+  }
+  #root .Vip8 .div2 {
+    display: none;
+  }
+  #root .Vip11 .div .h1 {
+    margin-left: 50px;
+  }
+  #root .Vip11 .div .p {
+    margin-left: 200px;
+  }
+  #root .Vip11 .slideBigBoss {
+    transform: scale(0.8);
+    margin-left: 170px;
+  }
+  .Boss .buy {
+    width: 100%;
+  }
+  .Boss .buy .img {
+    margin-left: 20px;
+    transform: scale(0.8);
+  }
+  .Boss .buy .buttonImg {
+    width: 200px;
+    margin-top: -50px;
+    margin-left: 210px;
+  }
+  .Boss .buy .divBoss {
+    transform: scale(0.8);
+    margin-top: 100px;
+    margin-left: -200px;
+  }
+  .Boss .Pay .windowBoss {
+    width: 80%;
+  }
+  .Boss .Pay .BigBoss {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    margin-left: -100px;
+    transform: scale(0.8);
+  }
+  .Boss .Pay .BigBuy {
+    margin-left: -150px;
+    transform: scale(0.8);
+  }
+}
 @media only screen and (max-width: 600px) {
   .alert {
     width: 100%;

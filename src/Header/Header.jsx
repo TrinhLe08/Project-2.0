@@ -101,37 +101,37 @@ export default function Header() {
   const ClickHome = () => {
     let Home = ".Vip1";
 
-    Click(700, Home, 5, 500, 90, 900, -20);
+    Click(700, Home, 5, 2000, 90, 900, -20);
   };
 
   const ClickSections = () => {
     let Section = ".Vip6";
 
-    Click(700, Section, 100, 500, -90, 900, 100);
+    Click(700, Section, 100, 1000, -90, 900, 100);
   };
 
   const ClickPages = () => {
     let Pages = ".Vip7";
 
-    Click(700, Pages, 100, 500, 90, 900, 100);
+    Click(700, Pages, 100, 1000, 90, 900, 100);
   };
 
   const ClickDemo = () => {
     let Demo = ".Vip8";
 
-    Click(700, Demo, 1, 500, -90, 900, -20);
+    Click(700, Demo, 1, 1000, -90, 900, -20);
   };
 
   const ClickIcon = () => {
     let Icon = ".Vip9";
 
-    Click(700, Icon, 1, 500, 90, 900, -50);
+    Click(700, Icon, 1, 1000, 90, 900, -50);
   };
 
   const ClickBuy = () => {
     let Buy = ".Vip12";
 
-    Click(700, Buy, 10, 500, 90, 900, 10);
+    Click(700, Buy, 10, 1000, 90, 900, 10);
   };
 
   const ClickSub = () => {

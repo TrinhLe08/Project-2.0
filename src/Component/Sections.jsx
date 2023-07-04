@@ -22,7 +22,7 @@ export default function Vip6() {
             : " Build pages in no time using pre-made sections! From headers to footers,  you will be able to choose the best combination for your project. We have created multiple   sections for you to put together and customise into pixel perfect example pages."}
         </p>
         <button className="button">
-          <a href="/"> {!Vip.vietSub ? "Xem tất cả" : "View All Sections"}</a>
+          <a href="https://main--glittery-madeleine-334d88.netlify.app/"> {!Vip.vietSub ? "Xem tất cả" : "View All Sections"}</a>
         </button>
       </div>
 
