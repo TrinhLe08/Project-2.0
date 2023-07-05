@@ -19,7 +19,7 @@ export default function Vip8() {
               : "  Do you want to test and see the benefits of this kit before purchasing it?  You can give the demo version a try. It features enough basic components for you to get a  feel of the design and also test the quality of the code. Get it free on GitHub!"}
           </p>
           <button className="button">
-            <a href="https://github.com/TrinhLe08/Project-2.0.git">
+            <a href="https://github.com/vuvanhoan96/HookProject">
               {!Vip.vietSub ? "Xem Demo Trên GitHub" : "View Demo on Github"}
             </a>
           </button>
