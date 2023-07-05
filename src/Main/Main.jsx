@@ -22,7 +22,7 @@ export default function Main() {
     const Vip = useContext(VipContext);
     
   return (
-    <div className="Main">
+    <div className="Main" >
       <Header></Header>
       <Button></Button>
       <Vip1></Vip1>
